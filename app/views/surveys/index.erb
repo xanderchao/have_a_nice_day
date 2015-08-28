@@ -1,0 +1,3 @@
+<% @surveys.each do |survey| %>
+  <li><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></li>
+<% end %>
