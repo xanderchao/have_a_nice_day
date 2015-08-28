@@ -20,6 +20,7 @@ post '/login' do
     session[:user_id] = user.id
     redirect "/profile"
   else
+    flash[:wrong_login] = "Your email or password was incorrect"
     redirect "/entry"
   end
 end
