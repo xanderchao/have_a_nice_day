@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
   has_many :surveys, foreign_key: "creator_id", class_name: "Survey"
   has_many :rounds
+  validates_presence_of :email, :password_hash
+  validates_uniqueness_of :email, :message => "is already taken"
+  validates_format_of :email, with: /\S+@[a-z0-9]+\S+.{1}[a-z]{2,3}/i
+
 
   include BCrypt
 

@@ -1,14 +1,15 @@
 get '/entry' do
   @user = User.new
-  erb :'/users/new' #new is a login & signup page
+  erb :'/users/entry'
 end
 
 post '/signup' do
   user = User.new(params[:user])
   if user.save
-    redirect "/"
+    session[:user_id] = user.id
+    redirect "/profile"
   else
-    # flash[:error] = user.error.full_messages
+    flash[:errors] = user.errors.full_messages
     redirect '/entry'
   end
 end

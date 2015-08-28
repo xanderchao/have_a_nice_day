@@ -18,8 +18,12 @@ require 'logger'
 require 'bcrypt'
 require 'pry'
 
+
 require 'sinatra'
+require 'sinatra/flash'
+require 'sinatra/redirect_with_flash'
 require "sinatra/reloader" if development?
+
 
 require 'erb'
 
