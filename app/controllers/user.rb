@@ -1,4 +1,4 @@
-get '/entry' do
+get '/' do
   @user = User.new
   erb :'/users/entry'
 end
@@ -10,7 +10,7 @@ post '/signup' do
     redirect "/profile"
   else
     flash[:errors] = user.errors.full_messages
-    redirect '/entry'
+    redirect '/'
   end
 end
 
@@ -21,7 +21,7 @@ post '/login' do
     redirect "/profile"
   else
     flash[:wrong_login] = "Your email or password was incorrect"
-    redirect "/entry"
+    redirect "/"
   end
 end
 
@@ -30,7 +30,7 @@ get "/profile" do
     @user = User.find_by(id: session[:user_id])
     erb :"users/show"
   else
-    redirect "/entry"
+    redirect "/"
   end
 end
 
