@@ -1,1 +1,5 @@
-# have_a_nice_day
+Have a Nice Day is...
+- Ernesto
+- Navraj
+- Alex
+
