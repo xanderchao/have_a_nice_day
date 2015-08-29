@@ -19,11 +19,16 @@
 </head>
 
 <div class= "header-bar">
-  <a href="/">Home</a>
-  <% if logged_in? %>
-    | <a href="/profile">Profile</a>
-    | <a href="/logout">Log Out</a>
-  <% end %>
+  <header id='header'>
+    SurveyGorilla by HaND
+  </header>
+  <div id="nav">
+    <a href="/">Home</a>
+    <% if logged_in? %>
+      | <a href="/profile">Profile</a>
+      | <a href="/logout">Log Out</a>
+    <% end %>
+  </div>
 </div>
 
 <body>
