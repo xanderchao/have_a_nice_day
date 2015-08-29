@@ -10,8 +10,7 @@ $(document).ready(function () {
       data: $(this).serialize()
 
       }).done(function(partial){
-        $('#question-list').remove();
-        $('body').append(partial);
+        $('#question-list').append(partial);
     });
   });
 });
