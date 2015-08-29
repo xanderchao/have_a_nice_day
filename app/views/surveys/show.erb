@@ -1,2 +1,15 @@
 <h2><%= @survey.title %></h2>
 
+<% if @questions %>
+  <% @questions.each_with_index do |q,i| %>
+      <%= i+1 %>. <%= q.text %>
+      <br>
+  <% end %>
+<% end %>
+
+<div class='container' id= 'create-question'>
+  <form action="/surveys/<%=@survey.id%>/questions" method="POST">
+    <input type="text" name="text" placeholder="Question"/>
+    <input type="submit" value="Add" />
+  </form>
+</div>
