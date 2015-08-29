@@ -12,7 +12,7 @@ end
 post '/surveys/:id/questions' do
   @survey = Survey.find_by(id: params[:id])
   @survey.questions.create(text: params[:text])
-  redirect '/surveys/:id'
+  redirect "/surveys/#{@survey.id}"
 end
 
 post '/surveys' do
