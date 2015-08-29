@@ -8,7 +8,7 @@
 </div>
 
 <div class='container' id='question-list'>
-  <% @survey.questions.each_with_index do |q,i| %>
+  <% @survey.questions.each do |q| %>
     <h3><%= q.text %></h3>
     <% q.choices.each do |c| %>
       <li> <%= c.text %> </li>
