@@ -1,9 +1,100 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+html{
+  background-color: #7FC7AF;
 }
-th {
+
+form {
+  text-align: center;
+}
+
+.header-bar{
+  background-color: black;
+  color: white;
+  padding-top: 1em;
+  padding-left: 10px;
+  padding-right: 1em;
+}
+
+#header{
+  display: inline-block;
+  padding-bottom: 1em;
+}
+
+#nav {
+  float: right;
+}
+
+#nav > a {
+  text-decoration: none;
+  color: white;
+}
+
+#deck_list {
   text-align: left;
 }
+
+.page_headline{
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.container {
+  background-color: white;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 2em;
+  padding: 1em;
+  border-style: solid;
+  border-width: 5px;
+  text-align: center;
+}
+
+.entry {
+  text-align: center;
+}
+
+.input {
+  padding: 1em;
+}
+
+.round_container {
+  background-color: white;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 2em;
+  padding: .5em;
+  border-style: solid;
+  border-width: 5px;
+  text-align: center;
+}
+
+/*table {
+   border: 1px solid black;
+   text-align: center;
+}*/
+
+.round_container table {
+  width: 100%;
+}
+
+.round_container th {
+  height: 40px;
+  background-color: #A9A9A9;
+}
+
+.round_container td {
+  height: 40px;
+  background-color: #F0F8FF;
+}
+
+#circle {
+  position: relative;
+  left: 1em;
+}
+
+#circle strong {
+  position: relative;
+  right: 2.75em;
+  bottom: 1.625em;
+  font-size: 125%;
+}
+
