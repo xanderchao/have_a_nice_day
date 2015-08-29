@@ -1,8 +1,9 @@
 <h2><%= @survey.title %></h2>
 
 <% if @questions %>
-  <% @questions.each do |q| %>
-      <li><%= q.text %></li>
+  <% @questions.each_with_index do |q,i| %>
+      <%= i+1 %>. <%= q.text %>
+      <br>
   <% end %>
 <% end %>
 

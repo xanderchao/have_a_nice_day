@@ -18,7 +18,7 @@ end
 post '/surveys' do
   @survey = Survey.new(creator_id: session[:user_id], title: params[:title])
   if @survey.save
-    redirect '/surveys'
+    redirect "/surveys/#{@survey.id}"
   else
     redirect '/surveys'
   end
