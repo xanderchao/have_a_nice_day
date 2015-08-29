@@ -7,6 +7,7 @@ end
 post '/questions/:id/choices' do
   @question = Question.find_by(id: params[:id])
   @question.choices.create(text: params[:text])
-  redirect "/questions/#{@question.id}"
+  # redirect "/questions/#{@question.id}"
+  redirect ""
 end
 
