@@ -103,3 +103,6 @@ font-size: 20px;
   font-size: 125%;
 }
 
+#question-choices {
+  list-style:none;
+}

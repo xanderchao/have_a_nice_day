@@ -5,8 +5,16 @@ end
 
 get '/surveys/:id' do
   @survey = Survey.find_by(id: params[:id])
-  @questions = @survey.questions
+  @round = @survey.rounds.create(user_id: current_user.id)
+  @question = @survey.questions.first
+  # @response = Response.new
   erb :'/surveys/show'
+end
+
+get '/surveys/:id/edit' do
+  @survey = Survey.find_by(id: params[:id])
+  @questions = @survey.questions
+  erb :'/surveys/edit'
 end
 
 post '/surveys/:id/questions' do
