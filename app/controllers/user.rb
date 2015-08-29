@@ -1,6 +1,10 @@
 get '/' do
   @user = User.new
-  erb :'/users/entry'
+  if logged_in?
+    redirect '/surveys'
+  else
+    erb :'/users/entry'
+  end
 end
 
 post '/signup' do
