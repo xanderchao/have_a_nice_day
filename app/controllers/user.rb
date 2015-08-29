@@ -22,7 +22,7 @@ post '/login' do
   if User.authenticate(params[:user][:email], params[:user][:password])
     user = User.find_by(email: params[:user][:email])
     session[:user_id] = user.id
-    redirect "/profile"
+    redirect "/surveys"
   else
     flash[:wrong_login] = "Your email or password was incorrect"
     redirect "/"
