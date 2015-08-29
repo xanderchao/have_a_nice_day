@@ -1,0 +1,6 @@
+<div class='container' id='question-list'>
+  <% @survey.questions.each_with_index do |q,i| %>
+    <%= i+1 %>. <%= q.text %>
+    <br>
+  <% end %>
+</div>
