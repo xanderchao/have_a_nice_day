@@ -2,7 +2,7 @@ post '/questions/:id/choices' do
   @question = Question.find_by(id: params[:id])
   @question.choices.create(text: params[:text])
   @survey = @question.survey_id
-  redirect "/surveys/#{@survey}"
+  redirect "/surveys/#{@survey}/edit"
 end
 
 get "/questions/:id" do

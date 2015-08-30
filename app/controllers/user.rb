@@ -32,6 +32,8 @@ end
 get "/profile" do
   if logged_in?
     @user = User.find_by(id: session[:user_id])
+    @surveys_created = @user.surveys || []
+    @surveys_taken = @user.rounds || []
     erb :"users/show"
   else
     redirect "/"
