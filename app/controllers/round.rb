@@ -7,9 +7,13 @@
 
 get '/rounds/:id' do
   @round = Round.find_by(id: params[:id])
-  @question = @round.survey.questions.first
-  @response = @question.choices.responses.new
-  erb :'/rounds/show'
+  @question = get_question(@round)
+  @response = Response.new
+  if @question == nil
+    erb :'/rounds/show'
+  else
+
+  end
 end
 
 
