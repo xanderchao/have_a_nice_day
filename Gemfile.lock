@@ -30,7 +30,7 @@ GEM
     minitest (5.8.0)
     multi_json (1.11.2)
     pg (0.18.2)
-    pry (0.10.0)
+    pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
@@ -98,3 +98,6 @@ DEPENDENCIES
   sinatra-flash
   sinatra-redirect-with-flash
   thin
+
+BUNDLED WITH
+   1.10.6
