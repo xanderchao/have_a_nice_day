@@ -1,10 +1,15 @@
-
-<div class='container' id='survey-list'>
-  <% @surveys.each do |survey| %>
-    <li><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></li>
-    <a href="/surveys/<%= survey.id %>/edit">Edit</a>
-  <% end %>
-</div>
+<% @surveys.each do |survey| %>
+  <div class='container'>
+    <a href="/surveys/<%= survey.id %>"><%= survey.title %></a>
+    <form id= 'edit-survey' action='/surveys/<%= survey.id %>/edit' method="get">
+      <input type="submit" value="Edit" />
+    </form>
+    <form id= 'delete-survey' action='/surveys/<%= survey.id%>' method="POST">
+      <input type="hidden" name="_method" value="delete" />
+      <input type="submit" value="Delete" />
+    </form>
+  </div>
+<% end %>
 
 <div class='container' id= 'create-survey'>
   <form action="/surveys" method="POST">
