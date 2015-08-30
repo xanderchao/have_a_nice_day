@@ -1,6 +1,6 @@
 <% @surveys.each do |survey| %>
   <div class='container'>
-    <a href="/surveys/<%= survey.id %>"><%= survey.title %></a>
+    <a class='button' href="/surveys/<%= survey.id %>"><%= survey.title %></a>
     <form class='button' id= 'edit-survey' action='/surveys/<%= survey.id %>/edit' method="get">
       <input type="submit" value="Edit" />
     </form>
@@ -14,9 +14,10 @@
   </div>
 <% end %>
 
-<div class='create-survey'>
+<div class='create-survey'><p>
+
   <form action="/surveys" method="POST">
-    <input type="text" name="title" placeholder="Title"/>
+    <input id='t' type="text" name="title" placeholder="Title"/>
     <input type="submit" value="Create Survey" />
   </form>
 </div>
