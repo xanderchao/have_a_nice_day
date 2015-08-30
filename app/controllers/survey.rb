@@ -20,7 +20,7 @@ end
 post '/surveys/:id/questions' do
   @survey = Survey.find_by(id: params[:id])
   @survey.questions.create(text: params[:text])
-  @survey.questions.last.text
+  erb :'/surveys/partial', layout: false
 end
 
 post '/surveys' do
