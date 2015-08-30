@@ -1,16 +1,7 @@
 <h2><%= @survey.title %></h2>
 
-<div class='container' id='question-list'>
-  <h3><%= @question.text %></h3>
-  <form action="/rounds/<%= @round.id %>/responses" method="POST">
-    <ul id="question-choices">
-      <% @question.choices.each do |choice| %>
-        <li>
-        <input type="radio" name="choice" value="<%= choice.id%>"> <%= choice.text %> </input></li>
-      <% end %>
-    </ul>
-    <input type="submit" value="Add" />
-  </form>
+<div class='container' id='current-question'>
+  <%= erb :"surveys/game_partial" %>
 </div>
 
 
