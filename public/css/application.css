@@ -6,6 +6,11 @@ form {
   text-align: center;
 }
 
+li{
+font-family: 'Montserrat', sans-serif;
+font-size: 20px;
+}
+
 .header-bar{
   background-color: black;
   color: white;
@@ -98,3 +103,6 @@ form {
   font-size: 125%;
 }
 
+#question-choices {
+  list-style:none;
+}
