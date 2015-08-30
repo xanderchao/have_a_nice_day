@@ -8,11 +8,12 @@
 get '/rounds/:id' do
   @round = Round.find_by(id: params[:id])
   @question = get_question(@round)
-  @response = Response.new
+  # @response = Response.new
   if @question == nil
-    erb :'/rounds/show'
+    redirect "/"
   else
-
+    erb :"surveys/game_partial"
+    # redirect :'/surveys/show'
   end
 end
 

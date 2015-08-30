@@ -9,9 +9,8 @@ end
 def get_question(round)
   survey = Survey.find_by(id: round.survey_id)
   all_questions = survey.questions
-  all_questions.shift
-  # responded = round.responses.all
-  # answered = responded.map {|response| response.choice.question}
-  # available = all_questions - answered
-  # available.first
+  responded = round.responses.all
+  answered = responded.map {|response| response.choice.question}
+  available = all_questions - answered
+  available.sample
 end
