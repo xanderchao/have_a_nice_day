@@ -6,7 +6,7 @@
 <div class="container">
   <h3>Created</h3>
   <% @surveys_created.each do |survey| %>
-    <li><a href= "/surveys/<%= survey.id %>"><%= survey.title %></a></li>
+    <li><a href= "/surveys/<%= survey.id %>/edit"><%= survey.title %></a></li>
   <% end %>
 </div>
 
@@ -14,8 +14,9 @@
   <h3>Taken</h3>
   <% @surveys_taken.each do |round| %>
      <h4><%=round.survey.title%></h4>
-    <% round.responses.each do |response| %>
-      <li><%= response.question.text %>: <%= response.choice.text %></li>
-    <% end %>
+      <% round.responses.each do |response| %>
+        <li><%= response.question.text %> <i><%= response.choice.text %></i></li>
+        <br>
+      <% end %>
   <% end %>
 </div>
