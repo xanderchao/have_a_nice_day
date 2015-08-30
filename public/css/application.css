@@ -1,12 +1,12 @@
 html{
-  background-color: #7FC7AF;
+  background-color: red;
 }
 
 form {
   text-align: center;
 }
 
-li{
+li {
 font-family: 'Montserrat', sans-serif;
 }
 
@@ -16,11 +16,14 @@ font-family: 'Montserrat', sans-serif;
   padding-top: 1em;
   padding-left: 10px;
   padding-right: 1em;
+  box-shadow: 0px 5px 5px #d4d4d4;
+
 }
 
 #header{
   display: inline-block;
   padding-bottom: 1em;
+
 }
 
 #nav {
@@ -50,6 +53,12 @@ font-family: 'Montserrat', sans-serif;
   border-style: solid;
   border-width: 5px;
   text-align: center;
+  border-radius: 25px;
+  padding: 20px;
+  width: 270px;
+  height: 150px;
+  font-size: 15px;
+
 }
 
 .entry {
@@ -104,4 +113,8 @@ font-family: 'Montserrat', sans-serif;
 
 #question-choices {
   list-style:none;
+}
+
+#survery-lisr {
+
 }
