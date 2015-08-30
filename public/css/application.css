@@ -1,12 +1,12 @@
 html{
-  background-color: #7FC7AF;
+  background-color: red;
 }
 
 form {
   text-align: center;
 }
 
-li{
+li {
 font-family: 'Montserrat', sans-serif;
 }
 
@@ -16,11 +16,14 @@ font-family: 'Montserrat', sans-serif;
   padding-top: 1em;
   padding-left: 10px;
   padding-right: 1em;
+  box-shadow: 0px 5px 5px #d4d4d4;
+
 }
 
 #header{
   display: inline-block;
   padding-bottom: 1em;
+
 }
 
 #nav {
@@ -43,14 +46,54 @@ font-family: 'Montserrat', sans-serif;
 
 .container {
   background-color: white;
-  margin-left: 30%;
-  margin-right: 30%;
+  width:200px;
+  height:200px;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
   margin-top: 2em;
-  padding: 1em;
   border-style: solid;
   border-width: 5px;
-  text-align: center;
+  display: inline-block;
+  font-family: 'Fjalla One', sans-serif;
+  margin-top: 100px;
+  border-radius: 500px;
+  vertical-align: middle;
 }
+
+.container a {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.button{
+  margin-top: 10px;
+}
+
+.create-survey{
+  background-color: white;
+  margin-top: 25px;
+  border:solid black;
+  width:500px;
+  height: 50px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+
+#t{
+  margin-top:10px;
+}
+
+
+/*.index {
+text-align: center;
+font-size: 20px;
+margin-top: 30px;
+font-family: 'Fjalla One', sans-serif;
+font-style: none;
+width:60px;
+}*/
 
 .entry {
   text-align: center;
@@ -104,4 +147,8 @@ font-family: 'Montserrat', sans-serif;
 
 #question-choices {
   list-style:none;
+}
+
+#survery-lisr {
+
 }
