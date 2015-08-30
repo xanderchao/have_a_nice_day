@@ -1,6 +1,6 @@
 <h2><%= @survey.title %></h2>
 
-<div class='container' id= 'create-question'>
+<div id= 'create-question'>
   <form action="/surveys/<%=@survey.id%>/questions" method="POST">
     <input type="text" name="text" placeholder="Question"/>
     <input type="submit" value="Add" />
@@ -8,6 +8,6 @@
 </div>
 
 
-<div class='container' id='question-list'>
+<div id='question-list'>
 <%= erb :"/surveys/partial" %>
 </div>

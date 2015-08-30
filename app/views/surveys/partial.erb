@@ -1,4 +1,4 @@
-    <div>
+    <div id="questionaire">
       <% @survey.questions.each do |q| %>
       <h3><%= q.text %></h3>
       <form action="/questions/<%=q.id%>/choices" method="POST">
