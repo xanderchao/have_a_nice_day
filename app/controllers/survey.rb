@@ -46,3 +46,8 @@ delete '/surveys/:id' do
   end
   redirect '/surveys'
 end
+
+get '/surveys/:id/results' do
+  @survey = Survey.find_by(id: params[:id])
+  erb :'/surveys/results'
+end
