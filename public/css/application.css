@@ -255,9 +255,22 @@ vertical-align: middle;
 margin-top: 90px;
 }
 
-.profile-created{
+.survey-created{
   background-color:white;
   margin:auto;
+  width:25%;
+  border-radius: 25px;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 20px;
+  height: 150px;
+}
+
+.survey-taken{
+  margin-top: 20px;
+  background-color:white;
+  margin:auto;
+  margin-top: 20px;
   width:25%;
   border-radius: 25px;
   border-radius: 25px;
