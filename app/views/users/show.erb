@@ -13,10 +13,13 @@
 <div class='survey-taken'>
   <h3>Survey's Taken</h3>
   <% @surveys_taken.each do |round| %>
-     <h4><%=round.survey.title%></h4>
+  <div class='test'>
+     <h4 ><%=round.survey.title%></h4>
       <% round.responses.each do |response| %>
         <li><%= response.question.text %> <i><%= response.choice.text %></i></li>
         <br>
       <% end %>
+      </div>
   <% end %>
 </div>
+

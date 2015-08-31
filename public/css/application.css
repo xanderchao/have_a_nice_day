@@ -271,14 +271,24 @@ margin-top: 90px;
   background-color:white;
   margin:auto;
   margin-top: 20px;
+  margin-bottom: 20px;
   width:25%;
   border-radius: 25px;
   border-radius: 25px;
   border: 1px solid black;
   padding: 20px;
-  height: 150px;
+
 }
 
 .profile-name{
   text-align: left;
+}
+
+.test{
+  background-color: #D7F6FF;
+    border-radius: 5px;
+    border:1px solid black;
+    padding: 5px;
+    margin-top: 20px;
+
 }
