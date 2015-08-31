@@ -255,9 +255,17 @@ vertical-align: middle;
 margin-top: 90px;
 }
 
-.profile{
+.profile-created{
   background-color:white;
   margin:auto;
-  width:75%;
-  bord
+  width:25%;
+  border-radius: 25px;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 20px;
+  height: 150px;
+}
+
+.profile-name{
+  text-align: left;
 }

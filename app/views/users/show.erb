@@ -1,17 +1,17 @@
 
-<div class='profile'>
+<div class='profile-name'>
   <h2><%= @user.email %></h2>
 </div>
 
-<div class='profile'>
-  <h3>Created</h3>
+<div class='profile-created'>
+  <h3>Survey's Created</h3>
   <% @surveys_created.each do |survey| %>
     <li><a href= "/surveys/<%= survey.id %>/edit"><%= survey.title %></a></li>
   <% end %>
 </div>
 
 <div>
-  <h3>Taken</h3>
+  <h3>Survey's Taken</h3>
   <% @surveys_taken.each do |round| %>
      <h4><%=round.survey.title%></h4>
       <% round.responses.each do |response| %>
