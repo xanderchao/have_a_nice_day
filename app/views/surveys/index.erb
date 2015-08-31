@@ -1,7 +1,10 @@
 <div class= 'index'>
-<% @surveys.each do |survey| %>
+  <% @surveys.each do |survey| %>
   <div class='container'>
-    <a class='button' href="/surveys/<%= survey.id %>"><%= survey.title %></a>
+
+      <div class='incep'>
+      <a class='title-name' href="/surveys/<%= survey.id %>"><%= survey.title %></a>
+    </div>
 
     <% if survey.creator_id == current_user.id %>
     <form class='button' id= 'edit-survey' action='/surveys/<%= survey.id %>/edit' method="get">
@@ -16,7 +19,7 @@
     </form>
     <%end%>
   </div>
-<% end %>
+  <% end %>
 </div>
 
 <div class='create-survey'>
