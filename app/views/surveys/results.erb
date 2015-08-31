@@ -1,10 +1,13 @@
-<h2><%= @survey.title %></h2>
+
+<h2 id='survey-title'><%= @survey.title %></h2>
 
 <h3>This survey has been taken <%=@survey.rounds.count%> times</h3>
 
+<div class='stats'>
 <% @survey.questions.each do |question| %>
-  <h4><%= question.text %></h4>
+  <h4 id='question-text'><%= question.text %></h4>
   <%question.choices.each do |choice|%>
-    <li><%=choice.text%>: <%=choice.responses.count%>
+    <li id='choice-info'><%=choice.text%>: <%=choice.responses.count%>
   <%end%>
 <%end%>
+</div>

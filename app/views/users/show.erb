@@ -1,22 +1,25 @@
 
-<div class="container">
+<div class='profile-name'>
   <h2><%= @user.email %></h2>
 </div>
 
-<div class="container">
-  <h3>Created</h3>
+<div class='survey-created'>
+  <h3>Survey's Created</h3>
   <% @surveys_created.each do |survey| %>
     <li><a href= "/surveys/<%= survey.id %>/edit"><%= survey.title %></a></li>
   <% end %>
 </div>
 
-<div class="container">
-  <h3>Taken</h3>
+<div class='survey-taken'>
+  <h3>Survey's Taken</h3>
   <% @surveys_taken.each do |round| %>
-     <h4><%=round.survey.title%></h4>
+  <div class='test'>
+     <h4 ><%=round.survey.title%></h4>
       <% round.responses.each do |response| %>
         <li><%= response.question.text %> <i><%= response.choice.text %></i></li>
         <br>
       <% end %>
+      </div>
   <% end %>
 </div>
+

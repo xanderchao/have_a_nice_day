@@ -1,12 +1,12 @@
     <div id="questionaire">
       <% @survey.questions.each do |q| %>
-      <h3><%= q.text %></h3>
+      <h3 id='question-with-choice'><%= q.text %></h3>
       <form action="/questions/<%=q.id%>/choices" method="POST">
         <input type="text" name="text" placeholder="Choice"/>
         <input type="submit" value="Add" />
       </form>
       <% q.choices.each do |c| %>
-      <li> <%= c.text %> </li>
+      <li class='choice-edit'> <%= c.text %> </li>
       <% end %>
       <% end %>
     </div>
