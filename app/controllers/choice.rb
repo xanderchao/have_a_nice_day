@@ -1,6 +1,7 @@
 post '/questions/:id/choices' do
   @question = Question.find_by(id: params[:id])
   @question.choices.create(text: params[:text])
+  #ZM: name this variable better. @survey vs @survey_id
   @survey = @question.survey_id
   redirect "/surveys/#{@survey}/edit"
 end

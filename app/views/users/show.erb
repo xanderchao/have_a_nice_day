@@ -9,7 +9,8 @@
     <li><a href= "/surveys/<%= survey.id %>/edit"><%= survey.title %></a></li>
   <% end %>
 </div>
-
+<!-- This is very un optimal O(n2) -->
+<!-- A lot of times you can't stop from doing this, so just limit the results you are doing it over -->
 <div class='survey-taken'>
   <h3>Survey's Taken</h3>
   <% @surveys_taken.each do |round| %>

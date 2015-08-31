@@ -5,7 +5,14 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email, :message => "is already taken"
   validates_format_of :email, with: /\S+@[a-z0-9]+\S+.{1}[a-z]{2,3}/i
 
+  #ZM: Look into has_secure_password now
 
+  #ZM: Incudes should go first, 
+  #followed by assoications, 
+  #followed by validations,
+  #class methods, 
+  #instance methods
+  
   include BCrypt
 
   def password

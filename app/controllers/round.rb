@@ -1,3 +1,5 @@
+#ZM: Delete your sudo code... This is why we have version control
+
 #Player clicks on a game or link.
 #That begins a round
 #Player a clicks on a choice for a particular question
@@ -16,7 +18,6 @@ get '/rounds/:id' do
     # redirect :'/surveys/show'
   end
 end
-
 
 # play button
 post "/rounds" do

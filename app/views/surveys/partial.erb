@@ -1,12 +1,15 @@
-    <div id="questionaire">
-      <% @survey.questions.each do |q| %>
-      <h3 id='question-with-choice'><%= q.text %></h3>
-      <form action="/questions/<%=q.id%>/choices" method="POST">
-        <input type="text" name="text" placeholder="Choice"/>
-        <input type="submit" value="Add" />
-      </form>
-      <% q.choices.each do |c| %>
+<!-- First thing, Fix Your freaking indentation -->
+<!-- Rename this file, _questions.erb -->
+
+<div id="questionaire">
+  <% @survey.questions.each do |q| %>
+    <h3 id='question-with-choice'><%= q.text %></h3>
+    <form action="/questions/<%=q.id%>/choices" method="POST">
+      <input type="text" name="text" placeholder="Choice"/>
+      <input type="submit" value="Add" />
+    </form>
+    <% q.choices.each do |c| %>
       <li class='choice-edit'> <%= c.text %> </li>
-      <% end %>
-      <% end %>
-    </div>
+    <% end %>
+  <% end %>
+</div>

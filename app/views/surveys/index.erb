@@ -1,24 +1,23 @@
 <div class= 'index'>
   <% @surveys.each do |survey| %>
-  <div class='container'>
-
+    <div class='container'>
       <div class='incep'>
       <a class='title-name' href="/surveys/<%= survey.id %>"><%= survey.title %></a>
     </div>
 
-    <% if survey.creator_id == current_user.id %>
-    <form class='button' id= 'edit-survey' action='/surveys/<%= survey.id %>/edit' method="get">
-      <input type="submit" value="Edit" />
-    </form>
-    <form class='button' id= 'delete-survey' action='/surveys/<%= survey.id%>' method="POST">
-      <input type="hidden" name="_method" value="delete" />
-      <input  type="submit" value="Delete" />
-    </form>
-    <form class ='button' id= 'results' action='/surveys/<%= survey.id%>/results' method="GET">
-      <input type="submit" value="Results" />
-    </form>
-    <%end%>
-  </div>
+      <% if survey.creator_id == current_user.id %>
+      <form class='button' id= 'edit-survey' action='/surveys/<%= survey.id %>/edit' method="get">
+        <input type="submit" value="Edit" />
+      </form>
+      <form class='button' id= 'delete-survey' action='/surveys/<%= survey.id%>' method="POST">
+        <input type="hidden" name="_method" value="delete" />
+        <input  type="submit" value="Delete" />
+      </form>
+      <form class ='button' id= 'results' action='/surveys/<%= survey.id%>/results' method="GET">
+        <input type="submit" value="Results" />
+      </form>
+      <%end%>
+    </div>
   <% end %>
 </div>
 
