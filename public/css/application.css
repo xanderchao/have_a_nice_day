@@ -78,6 +78,7 @@ font-family: 'Montserrat', sans-serif;
   height: 50px;
   margin: auto;
   margin-top: 50px;
+  padding:20px;
 }
 
 
@@ -204,4 +205,52 @@ h2{
 
 h3{
   text-align: center;
+}
+
+#survey-title{
+font-size: 50px;
+}
+
+#question-text{
+  text-align: center;
+}
+
+#choice-info{
+  text-align: center;
+  list-style-type: none;
+}
+
+.stats{
+  background-color: white;
+  border:solid black ;
+  margin:auto;
+  width:50%;
+  padding-bottom: 50px;
+}
+
+#title{
+margin-top: 13px;
+}
+
+.choice-edit{
+list-style-type: none;
+}
+
+#question-with-choice{
+border-top: solid 1px black;
+padding-top: 50px;
+}
+
+#b{
+vertical-align: middle;
+}
+
+.question-choice{
+background-color:white;
+margin:auto;
+width:50%;
+border:solid 1px black;
+padding-bottom: 20px;
+vertical-align: middle;
+margin-top: 90px;
 }

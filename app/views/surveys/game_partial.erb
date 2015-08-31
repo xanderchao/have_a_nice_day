@@ -1,10 +1,12 @@
+  <div class="question-choice">
   <h3><%= @question.text %></h3>
   <form action="/rounds/<%= @round.id %>/responses" method="POST">
     <ul id="question-choices">
       <% @question.choices.each do |choice| %>
         <li>
-        <input type="radio" name="choice" value="<%= choice.id%>"> <%= choice.text %> </input></li>
+        <input id='b' type="radio" name="choice" value="<%= choice.id%>"> <%= choice.text %> </input></li>
       <% end %>
     </ul>
     <input type="submit" value="Submit" />
   </form>
+</div>
