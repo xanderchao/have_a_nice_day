@@ -1,16 +1,16 @@
 
-<div class="container">
+<div class='profile'>
   <h2><%= @user.email %></h2>
 </div>
 
-<div class="container">
+<div>
   <h3>Created</h3>
   <% @surveys_created.each do |survey| %>
     <li><a href= "/surveys/<%= survey.id %>/edit"><%= survey.title %></a></li>
   <% end %>
 </div>
 
-<div class="container">
+<div>
   <h3>Taken</h3>
   <% @surveys_taken.each do |round| %>
      <h4><%=round.survey.title%></h4>
