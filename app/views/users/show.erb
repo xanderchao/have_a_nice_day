@@ -3,7 +3,7 @@
   <h2><%= @user.email %></h2>
 </div>
 
-<div>
+<div class='profile'>
   <h3>Created</h3>
   <% @surveys_created.each do |survey| %>
     <li><a href= "/surveys/<%= survey.id %>/edit"><%= survey.title %></a></li>
