@@ -1,3 +1,4 @@
+<div class= 'index'>
 <% @surveys.each do |survey| %>
   <div class='container'>
     <a class='button' href="/surveys/<%= survey.id %>"><%= survey.title %></a>
@@ -16,6 +17,7 @@
     <%end%>
   </div>
 <% end %>
+</div>
 
 <div class='create-survey'>
 
